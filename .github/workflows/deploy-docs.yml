@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy docs folder via rsync
         run: |
-          rsync -avz -e 'ssh -p 22022' --delete ./docs/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_PATH }}
+          rsync -avz -e 'ssh -p 1364' --delete ./docs/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_PATH }}
