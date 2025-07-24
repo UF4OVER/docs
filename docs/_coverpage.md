@@ -1,17 +1,8 @@
-<!-- markdownlint-disable first-line-h1 -->
+# UF4的神秘小站
 
-![logo](_media/icon.svg)
+> 一个无趣的人的小站
 
-# docsify <small>5.0.0-rc.1</small>
+- 一切都是折磨有趣的事情
 
-> A magical documentation site generator
-
-- Simple and lightweight
-- No statically built HTML files
-- Multiple themes
-
-[Get Started](#docsify)
-[GitHub](https://github.com/docsifyjs/docsify/)
-
-<!-- ![color](#f0f0f0) -->
-<!-- ![](/_media/icon.svg) -->
+[GitHub](https://github.com/UF4OVER)
+[Blog](https://uf4.top)
