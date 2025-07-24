@@ -1,25 +1,25 @@
-name: Deploy Docs to Server
+name: Deploy Docs Folder
 
 on:
   push:
     paths:
       - 'docs/**'
-    branches:
-      - '**'
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
 
       - name: Deploy docs folder via rsync
-        run: |
-          rsync -avz -e 'ssh -p 1364' --delete ./docs/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_PATH }}
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avz --delete
+          path: docs/
+          remote_path: ${{ secrets.SSH_TARGET_DOCS }}
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote_port: 22022
