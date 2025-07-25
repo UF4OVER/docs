@@ -11,17 +11,17 @@ heroText: UF4的文档
 tagline: 此站点仅用来存储我闲时写的一些文档
 actions:
   - text: 我的主页
-    icon: lightbulb
+#    icon: lightbulb
     link: https://uf4.top/
     type: primary
     
   - text: 我的博客
-    icon: lightbulb
+#    icon: lightbulb
     link: https://blog.uf4.top/
     type: primary
 
   - text: 我的图床
-    icon: lightbulb
+#    icon: lightbulb
     link: https://img.uf4.top/
     type: primary
 
@@ -44,4 +44,3 @@ actions:
 copyright: false
 footer: UF4 | 2025 © 四氟化铀（UF4）
 ---
-

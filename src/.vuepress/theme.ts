@@ -190,4 +190,9 @@ export default hopeTheme({
     //   },
     // },
   },
+
+  // // 添加自定义CSS
+  // head: [
+  //   ["link", { rel: "stylesheet", href: "/custom.css" }]
+  // ]
 });

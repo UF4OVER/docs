@@ -1,1 +1,192 @@
 // place your custom styles here
+/* docs/.vuepress/styles/index.scss */
+/* 覆盖代码块背景颜色 */
+@use "@sass-palette/hope-config";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body,
+html,
+.page,
+.theme-hope-content,
+div,
+span,
+p,
+code,
+pre {
+  font-family: 'JetBrains Mono', 'Microsoft YaHei', monospace, sans-serif !important;
+}
+
+
+pre,
+code {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.theme-hope-content pre code {
+  background-color: #f4f4f4 !important;
+  color: #333 !important;
+}
+
+/* 调整标题字体 */
+h1, h2, h3 {
+  font-family: "Fira Sans", sans-serif !important;
+}
+
+///* 隐藏侧边栏 logo */
+//.sidebar .site-name {
+//  display: none !important;
+//}
+
+.vp-hero {
+  &-info-wrapper {
+    /*禁用position*/
+    position: static !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-inline: auto;
+
+    &.hero-fullscreen {
+      height: calc(100vh - var(--navbar-height)) !important;
+    }
+  }
+
+  &-info {
+    z-index: 1;
+    width: 100%;
+    padding-inline: 2.5rem;
+
+    @media (max-width: hope-config.$pad) {
+      padding-inline: 1.5rem;
+    }
+
+    @media (min-width: hope-config.$pad) {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+
+  &-mask {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-position: 50%;
+    background-size: cover;
+
+    &::after {
+      content: " ";
+
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      display: block;
+    }
+
+    &.light {
+      display: block;
+
+      [data-theme="dark"] & {
+        display: none;
+      }
+    }
+
+    &.dark {
+      display: none;
+
+      [data-theme="dark"] & {
+        display: block;
+      }
+    }
+  }
+
+  &-infos {
+    z-index: 1;
+    margin: 0 0.5rem;
+  }
+
+  &-image {
+    display: block;
+    max-width: 100%;
+    max-height: 18rem;
+    margin: 1rem;
+
+    @media (max-width: hope-config.$pad) {
+      margin: 2rem auto;
+    }
+
+    @media (max-width: hope-config.$tablet) {
+      max-height: 16rem;
+      margin: 1.5rem auto;
+    }
+
+    @media (max-width: hope-config.$mobile) {
+      max-height: 14rem;
+    }
+
+    &.light {
+      display: block;
+
+      [data-theme="dark"] & {
+        display: none;
+      }
+    }
+
+    &.dark {
+      display: none;
+
+      [data-theme="dark"] & {
+        display: block;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0.5rem 0;
+
+    background: linear-gradient(
+                    120deg,
+                    var(--vp-c-accent-hover),
+                    var(--vp-c-accent) 30%,
+    );
+    background-clip: text;
+
+    font-weight: bold;
+    font-size: 3.6rem;
+    font-family: var(--vp-font);
+    line-height: 1.5;
+
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: hope-config.$tablet) {
+      margin: 0;
+    }
+
+    @media (max-width: hope-config.$pad) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: hope-config.$tablet) {
+      font-size: 2.25rem;
+      text-align: center;
+    }
+
+    @media (max-width: hope-config.$mobile) {
+      margin: 0 auto;
+      font-size: 2rem;
+    }
+
+    [data-theme="dark"] {
+      background: linear-gradient(
+                      120deg,
+                      var(--vp-c-accent-hover),
+                      var(--vp-c-accent) 30%,
+      );
+    }
+  }
+}
