@@ -40,7 +40,6 @@ actions:
 #        details: 完全可定制的导航栏以及改进的移动端外观
 #        link: https://theme-hope.vuejs.press/zh/guide/layout/navbar.html
 
-
 copyright: false
 footer: UF4 | 2025 © 四氟化铀（UF4）
 ---
