@@ -1,1 +1,1 @@
-export const sidebarData = {"/playhome/":["崩坏家族注意事项(2)","崩坏家族注意事项(1)","崩坏家族注意事项(3)"]};
+export const sidebarData = {"/demo/":["layout","markdown","page","disable","encrypt"],"/playhome/":["崩坏家族注意事项(2)","崩坏家族注意事项(1)","崩坏家族注意事项(3)"],"/网站部署指南/":["vhastro-Theme博客部署","vuepress文档部署","ZYCS-IMG图床部署"]};
